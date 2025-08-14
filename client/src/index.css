@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+  --font-primary: "Mulish", sans-serif;
+  --font-secondary: "Borel", cursive;
+
+  --color-primary: #ff5533; /* Orange */
+  --color-secondary: #f3f4f6; /* Cool Gray BG */
+  --color-accent: #035ca0; /* Green */
+  --color-hover: #4f46e5; /* Hover State */
+  --color-text: #1e293b; /* Slate Text */
+  --color-subtext: #6b7280; /* Gray Subtext */
+  --color-light: #ffffff; /* White */
+  --color-dark: #0f172a; /* Jet Black */
+  --color-success: #10b981; /* Emerald Green */
+  --color-border: #e5e7eb; /* Border Gray */
+
+  /* primary: "#FF5533" */
+  /* secondary: "#035CA0" */
+}
+/* * {
+  @apply font-outfit;
+} */
+.rightBlueGradiant {
+  @apply bg-gradient-to-r from-blue-400 to-blue-100;
+}
+.leftBlueGradiant {
+  @apply bg-gradient-to-l from-blue-600 to-blue-300;
+}
+.right {
+  @apply bg-gradient-to-l from-red-400 to-red-100;
+}
+.active {
+  @apply text-primary;
+}
+
+/* * {
+  @apply font-primary leading-snug;
+}
+
+.btn-primary {
+  @apply bg-accent text-white px-6 py-2 rounded-md text-xl  cursor-pointer hover:bg-accent-dark;
+}
+.btn-secondary {
+  @apply bg-primary text-white px-6 py-2 rounded-md text-xl  cursor-pointer hover:bg-gray-800;
+}
+
+.menu-link {
+  @apply hover:bg-blue-100/80 px-2 py-2 rounded-md text-lightText;
+}
+
+.active {
+  @apply text-success;
+}
+
+.card-heading {
+  @apply text-3xl font-semibold text-accent text-left;
+}
+.card-text {
+  @apply text-sm text-left text-gray-600;
+} */
