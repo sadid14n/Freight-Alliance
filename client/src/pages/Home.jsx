@@ -26,8 +26,10 @@ import Man1 from "../assets/man1.jpg";
 import Man2 from "../assets/man2.jpg";
 import Man3 from "../assets/man3.jpg";
 import Women1 from "../assets/women1.jpg";
+//
+import FASoftware from "../assets/FA-Software.png";
 
-import FASoftware from "../assets/FA-Software.jpg";
+import LaptopMockup from "../assets/laptop-mockup.png";
 
 import company from "../data/company";
 
@@ -83,66 +85,46 @@ const Home = () => {
       </section>
 
       {/* Product Section */}
-      <section className="w-full h-full bg-gradient-to-r from-blue-100/30 to-green-100/30 py-10 ">
+      <section className="w-full h-full bg-gradient-to-b from-green-300/30 to-blue-300/30 py-20">
         {/* first product */}
-        <div className="w-[90%] h-full bg-white mx-auto rounded-lg">
-          <h2 className="text-accent text-center text-6xl py-4">Software</h2>
-          <p className=" text-center py-4 text-lg text-gray-400">
-            Smart logistics software that streamlines shipping, tracks in real
-            time, and integrates seamlessly with your ecommerce platforms.
-          </p>
-          <div className=" bg-gray-200 h-full mx-14 my-8">
+        <div
+          className="w-[95%] h-[700px] bg-gradient-to-tr from-blue-900 via-emerald-600 to-blue-900
+ mx-auto rounded-4xl flex items-start justify-center relative overflow-hidden"
+        >
+          {/* Laptop mockup */}
+          <div className="relative ">
             <img
-              src={FASoftware}
-              alt=""
-              className="aspect-video object-contain"
+              src={LaptopMockup}
+              alt="Laptop Mockup"
+              className="max-w-[500px] mx-auto "
             />
-          </div>
 
-          <div className="flex justify-center items-center">
-            <button className="bg-primary text-white px-5 py-2 rounded-full my-3 cursor-pointer">
-              Learn More
-            </button>
+            {/* Image inside laptop screen */}
+            <div className="absolute top-[27%] left-[14%] w-[72%] h-[45%] overflow-hidden rounded-md ">
+              <img
+                src={FASoftware}
+                alt="App Preview"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="absolute top-105 left-1/2 -translate-x-1/2 flex justify-center flex-col">
+              <h2 className="text-center text-5xl text-white font-mulish font-medium">
+                FA Software
+              </h2>
+              <p className="w-[600px]  text-center text-xl text-white pt-10">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Consectetur tempora repudiandae atque. Harum, obcaecati!
+              </p>
+              <button className="w-70 mx-auto rounded-full text-md py-1 bg-white mt-10 font-medium font-outfit cursor-pointer">
+                Visit
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* second product */}
-        <div className="w-[90%] h-full bg-white mx-auto rounded-lg mt-50">
-          <h2 className="text-accent text-center text-6xl py-4">Freight</h2>
-          <p className=" text-center py-4 text-lg text-gray-400">
-            Smart logistics software that streamlines shipping, tracks in real
-            time, and integrates seamlessly with your ecommerce platforms.
-          </p>
-          <div className=" bg-gray-200 h-[500px] mx-14 my-8">
-            {/* <img src="" alt="" className="aspect-video" /> */}
-          </div>
-
-          <div className="flex justify-center items-center">
-            <button className="bg-primary text-white px-5 py-2 rounded-full my-3 cursor-pointer">
-              Learn More
-            </button>
-          </div>
-        </div>
-
-        {/* third product */}
-        <div className="w-[90%] h-full bg-white mx-auto rounded-lg mt-50">
-          <h2 className="text-accent text-center text-6xl py-4">
-            Warehouse and Logistics
-          </h2>
-          <p className=" text-center py-4 text-lg text-gray-400">
-            Smart logistics software that streamlines shipping, tracks in real
-            time, and integrates seamlessly with your ecommerce platforms.
-          </p>
-          <div className=" bg-gray-200 h-[500px] mx-14 my-8">
-            {/* <img src="" alt="" className="aspect-video" /> */}
-          </div>
-
-          <div className="flex justify-center items-center">
-            <button className="bg-primary text-white px-5 py-2 rounded-full my-3 cursor-pointer">
-              Learn More
-            </button>
-          </div>
-        </div>
+        <div className="w-[95%] h-[800px] bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900 mx-auto rounded-4xl mt-20"></div>
+        <div className="w-[95%] h-[800px] bg-gradient-to-tr from-green-900 via-green-800 to-green-900 mx-auto rounded-4xl mt-20"></div>
       </section>
 
       <section className="w-full h-screen relative ">
