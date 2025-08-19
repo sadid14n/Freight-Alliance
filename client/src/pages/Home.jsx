@@ -15,6 +15,9 @@ import {
 } from "lucide-react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 import HeroBG from "../assets/hero-bg.jpg";
 import Texture1 from "../assets/texture-1.jpg";
@@ -35,13 +38,39 @@ import company from "../data/company";
 
 const Home = () => {
   useGSAP(() => {
-    gsap.from("#hero-heading", {
-      y: -20,
+    gsap.to("#card1", {
+      scale: 0.7,
       opacity: 0,
-      duration: 1.5,
-      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#card1",
+        start: "top 15%",
+        end: "bottom 15%",
+        markers: true,
+        scrub: true,
+      },
     });
-    gsap.from("#hero-paragraph", { opacity: 0, delay: 0.5 });
+    gsap.to("#card2", {
+      scale: 0.7,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#card2",
+        start: "top 15%",
+        end: "bottom 15%",
+        markers: true,
+        scrub: true,
+      },
+    });
+    gsap.to("#card3", {
+      scale: 0.7,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: "#card3",
+        start: "top 15%",
+        end: "bottom 15%",
+        markers: true,
+        scrub: true,
+      },
+    });
   }, []);
 
   return (
@@ -88,8 +117,9 @@ const Home = () => {
       <section className="w-full h-full bg-gradient-to-b from-green-300/30 to-blue-300/30 py-20">
         {/* first product */}
         <div
+          id="card1"
           className="w-[95%] h-[700px] bg-gradient-to-tr from-blue-900 via-emerald-600 to-blue-900
- mx-auto rounded-4xl flex items-start justify-center relative overflow-hidden"
+ mx-auto rounded-4xl flex items-start justify-center  overflow-hidden sticky top-10"
         >
           {/* Laptop mockup */}
           <div className="relative ">
@@ -123,8 +153,14 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-[95%] h-[800px] bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900 mx-auto rounded-4xl mt-20"></div>
-        <div className="w-[95%] h-[800px] bg-gradient-to-tr from-green-900 via-green-800 to-green-900 mx-auto rounded-4xl mt-20"></div>
+        <div
+          id="card2"
+          className="w-[95%] h-[800px] sticky top-10 bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900 mx-auto rounded-4xl mt-20"
+        ></div>
+        <div
+          id="card3"
+          className="w-[95%] h-[800px]  sticky top-10 bg-gradient-to-tr from-green-900 via-green-800 to-green-900 mx-auto rounded-4xl mt-20"
+        ></div>
       </section>
 
       <section className="w-full h-screen relative ">
