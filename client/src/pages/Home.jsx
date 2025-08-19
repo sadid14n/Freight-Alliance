@@ -45,7 +45,6 @@ const Home = () => {
         trigger: "#card1",
         start: "top 15%",
         end: "bottom 15%",
-        markers: true,
         scrub: true,
       },
     });
@@ -56,7 +55,6 @@ const Home = () => {
         trigger: "#card2",
         start: "top 15%",
         end: "bottom 15%",
-        markers: true,
         scrub: true,
       },
     });
@@ -67,7 +65,6 @@ const Home = () => {
         trigger: "#card3",
         start: "top 15%",
         end: "bottom 15%",
-        markers: true,
         scrub: true,
       },
     });
