@@ -7,8 +7,8 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div className="w-full  sticky top-5 z-50">
-      <div className="w-[70%] mx-auto  bg-gray-200  text-black drop-shadow-lg mt-5 h-14 rounded-full">
+    <div className="w-full  sticky top-5 z-50 ">
+      <div className="w-[75%] mx-auto px-8  bg-gray-200  text-black drop-shadow-lg mt-5 h-14 rounded-full">
         <div className="flex items-center h-full px-4 gap-6">
           {/* Logo */}
           <div className="flex gap-4 items-center font-bold">
