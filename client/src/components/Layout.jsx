@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full  relative">
       <Navbar />
       {children}
       <Footer />
