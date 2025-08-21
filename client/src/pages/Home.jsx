@@ -43,7 +43,7 @@ const Home = () => {
       opacity: 0,
       scrollTrigger: {
         trigger: "#card1",
-        start: "top 15%",
+        start: "top 10%",
         end: "bottom 15%",
         scrub: true,
       },
@@ -92,8 +92,8 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="w-full h-full px-10 py-8 relative ">
-        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto">
+      <section className="w-full h-screen px-10 py-8 relative">
+        <div className="w-full  xl:mx-auto  mx-auto 2xl:flex 2xl:flex-col 2xl:justify-center h-full">
           {/* Background div */}
           <div
             className="absolute inset-0 bg-cover bg-center -z-10 h-full"
@@ -104,8 +104,8 @@ const Home = () => {
           </div>
 
           {/* Text content */}
-          <div className="relative z-10">
-            <h1 className="text-7xl font-bold leading-20 font-primary w-[80%]">
+          <div className="relative z-10 h-full w-full flex flex-col justify-center mx-auto 2xl:w-[80vw]   5xl:gap-14">
+            <h1 className="text-7xl 2xl:text-8xl 3xl:text-[100px] 4xl:text-[160px] 5xl:text-[250px] leading-20 2xl:leading-26 3xl:leading-28 4xl:leading-46  5xl:leading-70  font-bold  font-primary w-[80%]">
               <span className="text-primary font-primary">One Alliance.</span>{" "}
               <br />
               <span className="text-accent">
@@ -113,19 +113,15 @@ const Home = () => {
               </span>
             </h1>
 
-            <p className="text-xl font-normal leading-7 text-gray-500 py-6">
+            <p className="text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 5xl:text-6xl leading-7 2xl:leading-8 3xl:leading-12 4xl:leading-14 5xl:leading-24 font-normal  text-gray-500 py-6">
               Streamline your shipping, fulfillment, and inventory with our
               cutting-edge software, global transportation network, and
               warehousing solutions.
             </p>
 
             <div className="py-7 flex gap-5">
-              <button className="border-2 px-5 py-2 text-lg rounded-full bg-primary text-white cursor-pointer">
-                Explore Our Solutions
-              </button>
-              <button className="border-2 px-5 py-2 text-lg rounded-full bg-white text-accent border-accent cursor-pointer">
-                Get a Quote
-              </button>
+              <button className="button1">Explore Our Solutions</button>
+              <button className="button2 border-2">Get a Quote</button>
             </div>
           </div>
         </div>
@@ -133,21 +129,21 @@ const Home = () => {
 
       {/* Product Section */}
       <section className="w-full h-full bg-gradient-to-b from-green-300/30 to-blue-300/30 px-10 py-8 ">
-        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto">
+        <div className="w-full  mx-auto 2xl:w-[90vw] 3xl:w-[80vw]">
           {/* first product */}
           <div
             id="card1"
-            className="w-full h-[500px] bg-gradient-to-tr from-blue-900 via-emerald-600 to-blue-900
+            className="info-card w-full  bg-gradient-to-tr from-blue-900 via-emerald-600 to-blue-900
     mx-auto rounded-4xl flex items-center justify-center overflow-hidden sticky top-10 px-10"
           >
             {/* Wrapper for mockup + content */}
-            <div className="flex items-center justify-between w-full max-w-6xl">
+            <div className="flex items-center justify-between w-full">
               {/* Laptop mockup */}
               <div className="relative">
                 <img
                   src={LaptopMockup}
                   alt="Laptop Mockup"
-                  className="max-w-[550px]"
+                  className="w-[1000px] 2xl:w-[1200px] 3xl:w-[1600px] 4xl:w-[2100px] 5xl:w-[3000px]"
                 />
 
                 {/* Image inside laptop screen */}
@@ -161,35 +157,33 @@ const Home = () => {
               </div>
 
               {/* Text Content */}
-              <div className="ml-10 max-w-xl text-white">
-                <h2 className="text-5xl font-mulish font-medium">
+              <div className=" ml-10  text-white">
+                <h2 className="text-5xl 2xl:text-[80px] 4xl:text-[120px] 5xl:text-[160px] 4xl:text-nowrap  font-mulish font-medium ">
                   FA Software
                 </h2>
-                <p className="text-xl mt-6 leading-relaxed">
+                <p className="text-xl 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[34px] 5xl:text-[52px] mt-6 leading-relaxed">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Consectetur tempora repudiandae atque. Harum, obcaecati!
                 </p>
-                <button className="mt-10 px-6 py-2 bg-white text-blue-900 rounded-full text-md font-medium font-outfit cursor-pointer hover:bg-gray-200 transition">
-                  Visit
-                </button>
+                <button className="button2 mt-10">Visit</button>
               </div>
             </div>
           </div>
 
           <div
             id="card2"
-            className="w-full h-[500px] sticky top-10 bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900 mx-auto rounded-4xl mt-20"
+            className="w-full info-card sticky top-10 bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900 mx-auto rounded-4xl mt-20"
           ></div>
           <div
             id="card3"
-            className="w-full h-[500px]  sticky top-10 bg-gradient-to-tr from-green-900 via-green-800 to-green-900 mx-auto rounded-4xl mt-20"
+            className="w-full info-card  sticky top-10 bg-gradient-to-tr from-green-900 via-green-800 to-green-900 mx-auto rounded-4xl mt-20"
           ></div>
         </div>
       </section>
 
       {/* Integrations */}
-      <section className="w-full h-full relative py-10 px-10">
-        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto">
+      <section className="w-full h-screen flex items-center justify-center relative py-10 px-10 ">
+        <div className="xl:w-[90vw] xl:mx-auto  mx-auto">
           <div
             className="absolute inset-0 bg-cover bg-center -z-10 h-full"
             style={{ backgroundImage: `url(${Texture1})` }}
@@ -197,19 +191,17 @@ const Home = () => {
 
           <div className="absolute inset-0 bg-white/70 h-full -z-5"></div>
 
-          <div>
-            <h2 className="text-center text-nowrap text-6xl w-full mx-auto font-bold leading-18 text-accent font-primary ">
-              Seamless integration with other tools
-            </h2>
-            <p className="text-center text-2xl my-8 text-gray-500">
+          <div className="flex flex-col  justify-center">
+            <h2 className="heading2 ">Seamless integration with other tools</h2>
+            <p className="h2Para">
               150+ Pre Built Integrations For No Additional Cost
             </p>
 
-            <div className="flex justify-center mt-10 gap-4  flex-wrap">
+            <div className="flex justify-center mt-10 gap-4 2xl:gap-6 3xl:gap-8 5xl:gap-12 flex-wrap">
               {company.map((c) => (
                 <div
                   key={c.id}
-                  className="h-20 bg-gray-100  p-4 rounded-lg px-5"
+                  className="h-24 2xl:h-[110px] 3xl:h-[130px] 4xl:h-[170px] 5xl:h-[230px] bg-gray-100  p-4 rounded-lg px-5"
                 >
                   <img
                     src={c.logo}
@@ -220,8 +212,8 @@ const Home = () => {
               ))}
             </div>
 
-            <div className="flex justify-center gap-3 mt-10 items-center">
-              <button className="font-medium text-primary cursor-pointer">
+            <div className="flex justify-center gap-3 mt-10 5xl:mt-28 4xl:mt-20 3xl:mt-16 2xl:mt-12 items-center">
+              <button className=" text-xl 2xl:text-[25px] 3xl:text-[30px] 4xl:text-[38px] 5xl:text-[55px] font-medium text-primary cursor-pointer">
                 Explore Integrations
               </button>
               <MoveRight color="#ff5533" />
@@ -230,60 +222,70 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-full relative bg-gradient-to-b from-green-50 to-pink-50 py-10 px-10">
-        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto">
-          <h2 className="text-center font-primary font-bold text-6xl  text-accent">
-            Explore our amazing features
-          </h2>
-          <p className="text-center max-w-[60%] mx-auto text-xl text-gray-500 pt-8 leading-9">
+      <section className="w-full h-screen relative bg-gradient-to-b from-green-50 to-pink-50 py-10 px-10 flex justify-center items-center ">
+        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto ">
+          <h2 className="heading2">Explore our amazing features</h2>
+          <p className="h2Para">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident,
             eligendi. Lorem ipsum dolor sit amet.
           </p>
 
-          <div className="flex flex-wrap justify-center  gap-4 pt-8">
+          <div className="flex flex-wrap justify-center  gap-4 pt-8 ">
             {[
               {
                 title: "Import /Export",
-                icon: <Import size={32} color="#ff5533" />,
+                icon: (
+                  <Import size={32} color="#ff5533" className="card-icon" />
+                ),
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
               {
                 title: "Warehousing Storage",
-                icon: <Warehouse size={32} color="#ff5533" />,
+                icon: (
+                  <Warehouse size={32} color="#ff5533" className="card-icon" />
+                ),
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
               {
                 title: "Fullfillment Services",
-                icon: <TramFront size={32} color="#ff5533" />,
+                icon: (
+                  <TramFront size={32} color="#ff5533" className="card-icon" />
+                ),
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
               {
                 title: "Ocen Freight",
-                icon: <Sailboat size={32} color="#ff5533" />,
+                icon: (
+                  <Sailboat size={32} color="#ff5533" className="card-icon" />
+                ),
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
               {
                 title: "Air Freight",
-                icon: <PlaneTakeoff size={32} color="#ff5533" />,
-                desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
-              },
-              {
-                title: "Drayage",
-                icon: <Container size={32} color="#ff5533" />,
+                icon: (
+                  <PlaneTakeoff
+                    size={32}
+                    color="#ff5533"
+                    className="card-icon"
+                  />
+                ),
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
             ].map((item, i) => (
-              <div key={i} className=" w-[200px] px-5 py-4">
+              <div
+                key={i}
+                className="bg-gray-200 rounded-lg w-[200px] 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[600px] px-5 py-10 "
+              >
                 <div className="flex justify-center pb-4">
-                  <div className="bg-gray-200 p-2 rounded-lg">
+                  <div className="bg-gray-900 p-2 rounded-lg ">
                     {/* <Import color="#ff5533" size={32} /> */}
                     {item.icon}
                   </div>
                 </div>
-                <h3 className="text-lg font-bold text-center text-accent">
+                <h3 className="text-lg 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[34px] 5xl:text-[50px] font-bold text-center text-primary 5xl:my-10 4xl:my-6 3xl:my-4 2xl:my-3 my-2">
                   {item.title}
                 </h3>
-                <p className="text-center text-gray-500 text-sm pt-2">
+                <p className="text-center text-black text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[28px] 5xl:text-[42px] pt-2 ">
                   {item.desc}
                 </p>
               </div>
@@ -294,14 +296,14 @@ const Home = () => {
 
       <section
         id="reviews"
-        className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-full flex flex-col justify-center items-center relative px-10 py-10 pt-20 "
+        className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-screen flex flex-col justify-center items-center relative px-10 py-10 pt-20 "
       >
-        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto">
+        <div className="w-full mx-auto ">
           <div className="text-center mb-10">
-            <h2 className="text-6xl font-primary font-bold text-white">
+            <h2 className="heading2 font-primary font-bold text-white">
               Public Cheers for Us!
             </h2>
-            <p className="text-xl text-gray-300 mt-4">
+            <p className="text-xl text-gray-300 mt-4 h2Para">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur, aliquam.
             </p>
@@ -359,7 +361,7 @@ const Home = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`w-[300px] h-full px-10 py-4 bg-white rounded-4xl shadow-md relative ${
+                  className={`w-[300px] 2xl:w-[400px] 3xl:w-[500px] 4xl:w-[600px] 5xl:w-[700px] h-full px-10 py-4 bg-white rounded-4xl shadow-md relative ${
                     i === 6 ? "mr-48" : ""
                   }`}
                 >
@@ -367,10 +369,12 @@ const Home = () => {
                     <p className="text-7xl font-bold text-black">“</p>
                   </div>
                   <div>
-                    <p>{item.message}</p>
+                    <p className="text-lg 2xl:text-[22px] 3xl:text-[26px] 4xl:text-[34px] 5xl:text-[44px]">
+                      {item.message}
+                    </p>
                   </div>
                   <div className="flex gap-4 items-center pb-5 mt-10">
-                    <div className="w-10 h-10">
+                    <div className="w-10 h-10 2xl:w-14 2xl:h-14 3xl:w-18 3xl:h-18 4xl:w-22 4xl:h-22 5xl:w-30 5xl:h-30">
                       <img
                         src={item.image}
                         alt=""
@@ -378,7 +382,9 @@ const Home = () => {
                       />
                     </div>
                     <div>
-                      <h3 className="font-semibold">{item.name}</h3>
+                      <h3 className="font-semibold text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl 5xl:text-[43px]">
+                        {item.name}
+                      </h3>
                     </div>
                   </div>
                 </div>

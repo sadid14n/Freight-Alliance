@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full  sticky top-5 z-50 ">
-      <div className="w-[75%] mx-auto px-8  bg-gray-200  text-black drop-shadow-lg mt-5 h-14 rounded-full">
+      <div className="w-[75%] mx-auto px-8  bg-gray-200  text-black drop-shadow-lg mt-5 h-14 2xl:h-[70px] 4xl:h-[100px] 5xl:h-[160px] rounded-full">
         <div className="flex items-center h-full px-4 gap-6">
           {/* Logo */}
           <div className="flex gap-4 items-center font-bold">
