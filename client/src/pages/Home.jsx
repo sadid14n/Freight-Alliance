@@ -35,6 +35,19 @@ import FASoftware from "../assets/FA-Software.png";
 import LaptopMockup from "../assets/laptop-mockup.png";
 
 import company from "../data/company";
+import { Tilt } from "react-tilt";
+
+const defaultOptions = {
+  reverse: false, // reverse the tilt direction
+  max: 60, // max tilt rotation (degrees)
+  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+  scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
+  speed: 1000, // Speed of the enter/exit transition
+  transition: true, // Set a transition on enter/exit.
+  axis: null, // What axis should be disabled. Can be X or Y.
+  reset: true, // If the tilt effect has to be reset on exit.
+  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+};
 
 const Home = () => {
   useGSAP(() => {
@@ -223,14 +236,14 @@ const Home = () => {
       </section>
 
       <section className="w-full h-screen relative bg-gradient-to-b from-green-50 to-pink-50 py-10 px-10 flex justify-center items-center ">
-        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto ">
+        <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto 5xl:mb-10 5xl:mt-2">
           <h2 className="heading2">Explore our amazing features</h2>
           <p className="h2Para">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident,
             eligendi. Lorem ipsum dolor sit amet.
           </p>
 
-          <div className="flex flex-wrap justify-center  gap-4 pt-8 ">
+          <div className="flex flex-wrap justify-center  gap-4 2xl:gap-5 3xl:gap-6 4xl:gap-10 5xl:gap-14 pt-8 ">
             {[
               {
                 title: "Import /Export",
@@ -272,23 +285,25 @@ const Home = () => {
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="bg-gray-200 rounded-lg w-[200px] 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[600px] px-5 py-10 "
-              >
-                <div className="flex justify-center pb-4">
-                  <div className="bg-gray-900 p-2 rounded-lg ">
-                    {/* <Import color="#ff5533" size={32} /> */}
-                    {item.icon}
+              <Tilt options={defaultOptions}>
+                <div
+                  key={i}
+                  className="bg-gray-200 rounded-lg w-[200px] 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[520px] 5xl:h-[600px] 4xl:h-[450px] 3xl:h-[350px] 2xl:h-[300px] h-[250px] px-5 py-10 "
+                >
+                  <div className="flex justify-center pb-4">
+                    <div className="bg-gray-900 p-2 rounded-lg ">
+                      {/* <Import color="#ff5533" size={32} /> */}
+                      {item.icon}
+                    </div>
                   </div>
+                  <h3 className="text-xl 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[38px] 5xl:text-[55px] font-bold text-center text-primary 5xl:my-10 4xl:my-6 3xl:my-4 2xl:my-3 my-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-center text-black text-[14px] 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[30px] 5xl:text-[44px] pt-2 ">
+                    {item.desc}
+                  </p>
                 </div>
-                <h3 className="text-lg 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[34px] 5xl:text-[50px] font-bold text-center text-primary 5xl:my-10 4xl:my-6 3xl:my-4 2xl:my-3 my-2">
-                  {item.title}
-                </h3>
-                <p className="text-center text-black text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[28px] 5xl:text-[42px] pt-2 ">
-                  {item.desc}
-                </p>
-              </div>
+              </Tilt>
             ))}
           </div>
         </div>
@@ -296,9 +311,9 @@ const Home = () => {
 
       <section
         id="reviews"
-        className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-screen flex flex-col justify-center items-center relative px-10 py-10 pt-20 "
+        className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-screen flex flex-col justify-center items-center relative px-10 pt-20 "
       >
-        <div className="w-full mx-auto ">
+        <div className="w-full mx-auto overflow-hidden  h-full 2xl:mt-2 3xl:pt-2 3xl:mt-2 4xl:pt-4 4xl:mt-10 5xl:pt-14 5xl:mt-24 ">
           <div className="text-center mb-10">
             <h2 className="heading2 font-primary font-bold text-white">
               Public Cheers for Us!
@@ -310,10 +325,10 @@ const Home = () => {
           </div>
 
           {/* Cards wrapper */}
-          <div className="w-full overflow-hidden">
+          <div className="w-full ">
             <div
               id="testimonials"
-              className="w-fit flex flex-nowrap gap-10 items-center px-20 ml-32"
+              className="w-fit flex flex-nowrap gap-10 5xl:gap-20 items-center px-20 ml-32 "
             >
               {[
                 {
@@ -326,7 +341,7 @@ const Home = () => {
                   name: "Arda Gular",
                   image: Man2,
                   message:
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa itaque soluta lorem shd aksjd dsknf ashd rem ipsum dolor sit amet consectetur adipisicing elit",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa itaque soluta lorem shd aksjd dsknf ashd rem ",
                 },
                 {
                   name: "Maria Ancelotie",
@@ -350,7 +365,7 @@ const Home = () => {
                   name: "Arda Gular",
                   image: Man2,
                   message:
-                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa itaque soluta lorem shd aksjd dsknf ashd rem ipsum dolor sit amet consectetur adipisicing elit",
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsa itaque soluta lorem shd aksjd dsknf ashd",
                 },
                 {
                   name: "Maria Ancelotie",
@@ -361,20 +376,22 @@ const Home = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className={`w-[300px] 2xl:w-[400px] 3xl:w-[500px] 4xl:w-[600px] 5xl:w-[700px] h-full px-10 py-4 bg-white rounded-4xl shadow-md relative ${
+                  className={`w-[400px] 2xl:w-[500px] 3xl:w-[500px] 4xl:w-[600px] 5xl:w-[900px] h-[280px] 2xl:h-[350px] 3xl:h-[450px] 4xl:h-[600px] 5xl:h-[800px] px-10 py-4 bg-white rounded-4xl shadow-md relative flex flex-col justify-center ${
                     i === 6 ? "mr-48" : ""
                   }`}
                 >
                   <div>
-                    <p className="text-7xl font-bold text-black">“</p>
+                    <p className="text-7xl 2xl:text-[90px] 4xl:text-[120px] 5xl:text-[170px] font-bold text-black">
+                      “
+                    </p>
                   </div>
                   <div>
-                    <p className="text-lg 2xl:text-[22px] 3xl:text-[26px] 4xl:text-[34px] 5xl:text-[44px]">
+                    <p className="text-lg 2xl:text-[22px] 3xl:text-[26px] 4xl:text-[34px] 5xl:text-[50px]">
                       {item.message}
                     </p>
                   </div>
-                  <div className="flex gap-4 items-center pb-5 mt-10">
-                    <div className="w-10 h-10 2xl:w-14 2xl:h-14 3xl:w-18 3xl:h-18 4xl:w-22 4xl:h-22 5xl:w-30 5xl:h-30">
+                  <div className="flex gap-4 items-center pb-5 mt-10 5xl:mt-20">
+                    <div className="w-10 h-10 2xl:w-14 2xl:h-14 3xl:w-18 3xl:h-18 4xl:w-22 4xl:h-22 5xl:w-32 5xl:h-32">
                       <img
                         src={item.image}
                         alt=""
@@ -382,7 +399,7 @@ const Home = () => {
                       />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl 5xl:text-[43px]">
+                      <h3 className="font-semibold text-lg 2xl:text-xl 3xl:text-2xl 4xl:text-3xl 5xl:text-[45px]">
                         {item.name}
                       </h3>
                     </div>

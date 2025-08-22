@@ -100,13 +100,29 @@
 }
 
 .heading2 {
-  @apply text-6xl 2xl:text-[80px] 3xl:text-[95px] 4xl:text-[125px] 5xl:text-[190px] text-center text-nowrap  w-full mx-auto font-bold leading-18 text-accent font-primary;
+  @apply text-6xl 2xl:text-[80px] 3xl:text-[95px] 4xl:text-[125px] 5xl:text-[190px] text-center text-nowrap  w-full mx-auto font-bold leading-18  font-primary 5xl:pt-20;
 }
 
 .h2Para {
-  @apply text-2xl 2xl:text-[32px] 3xl:text-[36px] 4xl:text-[44px] 5xl:text-[70px] text-center my-8 3xl:my-12 4xl:my-20 5xl:my-30 text-gray-500;
+  @apply text-2xl 2xl:text-[30px] 3xl:text-[36px] 4xl:text-[44px] 5xl:text-[70px] text-center my-8 3xl:my-12 4xl:my-20 5xl:my-30;
 }
 
 .card-icon {
-  @apply w-8 h-8 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-16 5xl:w-24 5xl:h-24 text-[#ff5533];
+  @apply w-8 h-8 2xl:w-10 2xl:h-10 3xl:w-12 3xl:h-12 4xl:w-16 4xl:h-18 5xl:w-26 5xl:h-24 text-[#ff5533];
+}
+
+.footer-contact {
+  @apply text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[28px] 5xl:text-[40px] font-semibold;
+}
+
+.footer-icon {
+  @apply w-4 h-4 2xl:w-5 2xl:h-5 3xl:w-6 3xl:h-6 4xl:w-8 4xl:h-8 5xl:w-12 5xl:h-12;
+}
+
+.footer-section-heading {
+  @apply text-lg 2xl:text-[24px] 3xl:text-[32px] 4xl:text-[40px]  5xl:text-[65px] font-semibold pb-3 2xl:pt-6 3xl:pt-8 4xl:pt-10 5xl:pt-14;
+}
+
+.footer-section-content {
+  @apply text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[28px] 5xl:text-[42px] pb-3  font-primary font-medium text-gray-900 py-2 2xl:py-3 3xl:py-4 4xl:py-5 5xl:py-6;
 }
