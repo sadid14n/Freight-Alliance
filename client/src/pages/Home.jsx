@@ -129,7 +129,7 @@ const Home = () => {
               warehousing solutions.
             </p>
 
-            <div className="py-7 flex gap-5">
+            <div className="py-7 flex gap-5 max-sm:flex-col ">
               <button className="button1">Explore Our Solutions</button>
               <button className="button2 border-2">Get a Quote</button>
             </div>

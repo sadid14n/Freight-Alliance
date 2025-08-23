@@ -140,7 +140,7 @@ const Navbar = () => {
           </div>
 
           {/* Menu Items */}
-          <div className="flex flex-col bg-white rounded-2xl h-full pt-8 space-y-6 px-6 text-lg font-semibold">
+          <div className="flex flex-col bg-white rounded-b-2xl h-full pt-8 space-y-6 px-6 text-lg font-semibold">
             <Link
               to="/"
               onClick={() => setIsMobileMenuOpen(false)}
