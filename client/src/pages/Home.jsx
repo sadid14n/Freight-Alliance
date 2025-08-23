@@ -301,7 +301,7 @@ const Home = () => {
       {/* Reviews */}
       <section
         id="reviews"
-        className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-screen flex flex-col justify-center items-center relative px-10 pt-20 "
+        className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-screen flex flex-col justify-center items-center relative  sm:px-10 pt-20 "
       >
         <div className="w-full mx-auto overflow-hidden  h-full 2xl:mt-2 3xl:pt-2 3xl:mt-2 4xl:pt-4 4xl:mt-10 5xl:pt-14 5xl:mt-24 ">
           <div className="text-center mb-10">
@@ -317,7 +317,7 @@ const Home = () => {
           <div className="w-full ">
             <div
               id="testimonials"
-              className="w-fit flex flex-nowrap gap-10 5xl:gap-20 items-center px-20 ml-32 "
+              className="w-fit flex flex-nowrap gap-10 5xl:gap-20 items-center px-20 ml-32"
             >
               {[
                 {
