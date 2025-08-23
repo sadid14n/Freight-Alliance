@@ -35,19 +35,18 @@ import FASoftware from "../assets/FA-Software.png";
 import LaptopMockup from "../assets/laptop-mockup.png";
 
 import company from "../data/company";
-import { Tilt } from "react-tilt";
 
-const defaultOptions = {
-  reverse: false, // reverse the tilt direction
-  max: 60, // max tilt rotation (degrees)
-  perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-  scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
-  speed: 1000, // Speed of the enter/exit transition
-  transition: true, // Set a transition on enter/exit.
-  axis: null, // What axis should be disabled. Can be X or Y.
-  reset: true, // If the tilt effect has to be reset on exit.
-  easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-};
+// const defaultOptions = {
+//   reverse: false, // reverse the tilt direction
+//   max: 60, // max tilt rotation (degrees)
+//   perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+//   scale: 1.1, // 2 = 200%, 1.5 = 150%, etc..
+//   speed: 1000, // Speed of the enter/exit transition
+//   transition: true, // Set a transition on enter/exit.
+//   axis: null, // What axis should be disabled. Can be X or Y.
+//   reset: true, // If the tilt effect has to be reset on exit.
+//   easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+// };
 
 const Home = () => {
   useGSAP(() => {
@@ -280,24 +279,20 @@ const Home = () => {
                 desc: "Lorem, ipsum dolor. Lorem ipsum dolor sit",
               },
             ].map((item, i) => (
-              <Tilt options={defaultOptions}>
-                <div
-                  key={i}
-                  className="bg-gray-200 rounded-lg w-[200px] max-xl:w-full 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[520px] 5xl:h-[600px] 4xl:h-[450px] 3xl:h-[350px] 2xl:h-[300px] h-[250px] px-5 py-10 "
-                >
-                  <div className="flex justify-center pb-4">
-                    <div className="bg-gray-900 p-2 rounded-lg ">
-                      {item.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[38px] 5xl:text-[55px] font-bold text-center text-primary 5xl:my-10 4xl:my-6 3xl:my-4 2xl:my-3 my-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-center text-black text-[14px] 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[30px] 5xl:text-[44px] pt-2 ">
-                    {item.desc}
-                  </p>
+              <div
+                key={i}
+                className="bg-gray-200 rounded-lg w-[200px] max-xl:w-full 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[520px] 5xl:h-[600px] 4xl:h-[450px] 3xl:h-[350px] 2xl:h-[300px] h-[250px] px-5 py-10 "
+              >
+                <div className="flex justify-center pb-4">
+                  <div className="bg-gray-900 p-2 rounded-lg ">{item.icon}</div>
                 </div>
-              </Tilt>
+                <h3 className="text-xl 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[38px] 5xl:text-[55px] font-bold text-center text-primary 5xl:my-10 4xl:my-6 3xl:my-4 2xl:my-3 my-2">
+                  {item.title}
+                </h3>
+                <p className="text-center text-black text-[14px] 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[30px] 5xl:text-[44px] pt-2 ">
+                  {item.desc}
+                </p>
+              </div>
             ))}
           </div>
         </div>
