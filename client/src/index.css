@@ -84,7 +84,7 @@
 }
 
 .heading2 {
-  @apply text-[20px] sm:text-[34px] md:text-[44px] lg:text-[50px] xl:text-6xl 2xl:text-[80px] 3xl:text-[95px] 4xl:text-[125px] 5xl:text-[190px] text-center text-nowrap  w-full mx-auto font-bold leading-18  font-primary 5xl:pt-20;
+  @apply text-[28px] leading-9 sm:text-[34px] md:text-[44px] lg:text-[50px] xl:text-6xl 2xl:text-[80px] 3xl:text-[95px] 4xl:text-[125px] 5xl:text-[190px] text-center sm:text-nowrap  w-full mx-auto font-bold sm:leading-18  font-primary 5xl:pt-20;
 }
 
 .h2Para {
