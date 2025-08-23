@@ -17,6 +17,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import FB from "../assets/fb.svg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 import HeroBG from "../assets/hero-bg.jpg";
@@ -197,13 +199,38 @@ const Home = () => {
 
           <div className="absolute inset-0 bg-white/70 h-full -z-5"></div>
 
-          <div className="flex flex-col  justify-center ">
+          <div className="flex flex-col  justify-center overflow-hidden">
             <h2 className="heading2 ">Seamless integration with other tools</h2>
             <p className="h2Para">
               150+ Pre Built Integrations For No Additional Cost
             </p>
 
-            <div className="flex justify-center mt-10 gap-4 2xl:gap-6 3xl:gap-8 5xl:gap-12 flex-wrap">
+            <div className="flex space-x-4 sm:space-x-10 md:space-x-16 overflow-hidden group my-10 ">
+              <div className="flex animate-loop-scroll space-x-6 sm:space-x-10 md:space-x-16 group-hover:paused">
+                {company.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img.logo}
+                    alt=""
+                    loading="lazy"
+                    className="w-16 h-16 object-contain"
+                  />
+                ))}
+              </div>
+              {/* <div className="flex animate-loop-scroll space-x-16 group-hover:paused aria-hidden:true [animation-delay:25s]">
+                {company.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img.logo}
+                    alt=""
+                    loading="lazy"
+                    className="w-16 h-16 object-contain"
+                  />
+                ))}
+              </div> */}
+            </div>
+
+            {/* <div className="flex justify-center mt-10 gap-4 2xl:gap-6 3xl:gap-8 5xl:gap-12 flex-wrap">
               {company.map((c) => (
                 <div
                   key={c.id}
@@ -216,7 +243,7 @@ const Home = () => {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
 
             <div className="flex justify-center gap-3 mt-10 5xl:mt-28 4xl:mt-20 3xl:mt-16 2xl:mt-12 items-center">
               <button className=" text-xl 2xl:text-[25px] 3xl:text-[30px] 4xl:text-[38px] 5xl:text-[55px] font-medium text-primary cursor-pointer">
