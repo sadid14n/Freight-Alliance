@@ -213,7 +213,7 @@ const Home = () => {
                     src={img.logo}
                     alt=""
                     loading="lazy"
-                    className="w-16 h-16 object-contain"
+                    className="w-16 h-16 sm:w-[80px] sm:h-[80px] md:w-[100px] md:h-[100px] xl:w-[150px] xl:h-[120px] 3xl:w-[140px] 3xl:h-[140px] 4xl:w-[180px] 4xl:h-[180px] 5xl:w-[230px] 5xl:h-[240px] object-contain"
                   />
                 ))}
               </div>
