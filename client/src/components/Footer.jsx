@@ -7,13 +7,13 @@ import FB from "../assets/fb.svg";
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="w-[90%] mx-auto h-full   px-14 py-10 ">
-      <div className="flex justify-between">
-        <div className="flex flex-col w-[350px] 2xl:w-[450px] 3xl:w-[550px] 4xl:w-[700px] 5xl:w-[1100px]  h-full px-4">
+    <div className="w-[90%] max-md:w-full max-md:px-6 mx-auto h-full   px-14 py-10 ">
+      <div className="flex justify-between max-md:flex-col max-md:items-center">
+        <div className="flex flex-col max-md:items-center w-[350px] 2xl:w-[450px] 3xl:w-[550px] 4xl:w-[700px] 5xl:w-[1100px]  h-full px-4">
           <div>
             <img src={Logo} alt="" className="w-full " />
           </div>
-          <p className="pb-6 text-md 2xl:text-[18px] 3xl:text-[24px] 4xl:text-[30px] 5xl:text-[44px] text-gray-900">
+          <p className="pb-6 max-md:text-center text-md 2xl:text-[18px] 3xl:text-[24px] 4xl:text-[30px] 5xl:text-[44px] text-gray-900">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
 
@@ -32,8 +32,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex gap-20 mt-12">
-          <div className="flex flex-col">
+        <div className="flex max-md:flex-col max-md:w-full  gap-20 mt-12">
+          <div className="flex flex-col max-md:items-center">
             <h4 className="footer-section-heading">Getting Started</h4>
             {[
               { name: "Introduction" },
@@ -47,7 +47,8 @@ const Footer = () => {
               </p>
             ))}
           </div>
-          <div className="flex flex-col">
+
+          <div className="flex flex-col max-md:items-center ">
             <h4 className="footer-section-heading">Company</h4>
             {[
               { name: "About Us" },
@@ -60,7 +61,8 @@ const Footer = () => {
               </p>
             ))}
           </div>
-          <div className="flex flex-col">
+
+          <div className="flex flex-col max-md:items-center">
             <h4 className="footer-section-heading">Resources</h4>
             {[
               { name: "Support" },
@@ -79,7 +81,7 @@ const Footer = () => {
 
       <hr className="mt-14 text-gray-200" />
 
-      <div className="flex justify-between mt-10">
+      <div className="flex justify-between max-md:flex-col max-md:items-center max-md:gap-6 mt-10">
         <p>&copy;{year} Freight Alliance - All rights reserved</p>
         <div className="flex gap-4">
           <img src={FB} alt="" className="w-6 h-6" />

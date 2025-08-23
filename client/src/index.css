@@ -31,7 +31,8 @@
   --breakpoint-5xl: 240rem;
   --breakpoint-6xl: 320rem;
 
-  /* 640px → 40rem
+  /* 
+640px → 40rem
 768px → 48rem
 1024px → 64rem
 1280px → 80rem
@@ -39,7 +40,8 @@
 1920px → 120rem
 2560px → 160rem
 3840px → 240rem
-5120px → 320rem */
+5120px → 320rem 
+*/
 }
 
 /* * {
@@ -59,52 +61,34 @@
 }
 
 .button1 {
-  @apply border-2 px-5 py-2 rounded-full bg-primary text-white cursor-pointer text-lg  2xl:text-2xl 4xl:text-4xl 5xl:text-6xl 4xl:py-5 5xl:py-7 4xl:px-10 5xl:px-12;
+  @apply border-2 px-5 py-2 rounded-full bg-primary text-white cursor-pointer text-lg  2xl:text-3xl 4xl:text-4xl 5xl:text-6xl 4xl:py-5 5xl:py-7 4xl:px-10 5xl:px-12;
 }
 .button2 {
-  @apply px-5 py-1 rounded-full bg-white text-accent cursor-pointer text-lg  2xl:text-2xl 4xl:text-4xl 5xl:text-6xl 4xl:py-5 5xl:py-7 4xl:px-10 5xl:px-12;
+  @apply px-5 py-1 rounded-full bg-white text-accent cursor-pointer text-lg  2xl:text-3xl 4xl:text-4xl 5xl:text-6xl 4xl:py-5 5xl:py-7 4xl:px-10 5xl:px-12;
 }
-
-/* * {
-  @apply font-primary leading-snug;
-}
-
-.btn-primary {
-  @apply bg-accent text-white px-6 py-2 rounded-md text-xl  cursor-pointer hover:bg-accent-dark;
-}
-.btn-secondary {
-  @apply bg-primary text-white px-6 py-2 rounded-md text-xl  cursor-pointer hover:bg-gray-800;
-}
-
-.menu-link {
-  @apply hover:bg-blue-100/80 px-2 py-2 rounded-md text-lightText;
-}
-
-.active {
-  @apply text-success;
-}
-
-.card-heading {
-  @apply text-3xl font-semibold text-accent text-left;
-}
-.card-text {
-  @apply text-sm text-left text-gray-600;
-} */
 
 .menu-link {
   @apply text-[16px] 2xl:text-[20px] 3xl:text-[24px] 4xl:text-[30px] 5xl:text-[46px] 4xl:px-2 5xl:px-3 font-medium;
 }
 
 .info-card {
-  @apply h-[480px] 2xl:h-[600px] 3xl:h-[710px] 4xl:h-[970px] 5xl:h-[1450px];
+  @apply h-[650px] sm:h-[550px]  lg:h-[600px] xl:h-[500px] 2xl:h-[600px] 3xl:h-[710px] 4xl:h-[970px] 5xl:h-[1450px];
+}
+
+.heading1 {
+  @apply text-4xl leading-12 sm:text-5xl sm:leading-15  md:text-6xl md:leading-18 lg:text-7xl lg:leading-20 xl:text-[75px] xl:leading-20 2xl:text-[80px] 3xl:text-[92px] 4xl:text-[120px] 5xl:text-[190px]  2xl:leading-24 3xl:leading-28 4xl:leading-38  5xl:leading-60  font-bold  font-primary xl:w-[80%] w-full;
+}
+
+.heading1Para {
+  @apply text-[16px] leading-6 sm:text-[20px] sm:leading-8 md:text-[24px] md:leading-10 lg:text-[28px] lg:leading-12 xl:text-[20px] xl:leading-8 2xl:text-[24px] 2xl:leading-10 3xl:text-[30px] 3xl:leading-12 4xl:text-[38px] 5xl:text-[60px] 4xl:leading-16 5xl:leading-24 font-normal  text-gray-500 py-6;
 }
 
 .heading2 {
-  @apply text-6xl 2xl:text-[80px] 3xl:text-[95px] 4xl:text-[125px] 5xl:text-[190px] text-center text-nowrap  w-full mx-auto font-bold leading-18  font-primary 5xl:pt-20;
+  @apply text-[20px] sm:text-[34px] md:text-[44px] lg:text-[50px] xl:text-6xl 2xl:text-[80px] 3xl:text-[95px] 4xl:text-[125px] 5xl:text-[190px] text-center text-nowrap  w-full mx-auto font-bold leading-18  font-primary 5xl:pt-20;
 }
 
 .h2Para {
-  @apply text-2xl 2xl:text-[30px] 3xl:text-[36px] 4xl:text-[44px] 5xl:text-[70px] text-center my-8 3xl:my-12 4xl:my-20 5xl:my-30;
+  @apply text-[14px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-2xl 2xl:text-[30px] 3xl:text-[36px] 4xl:text-[44px] 5xl:text-[70px] text-center my-4 xl:my-8 3xl:my-12 4xl:my-20 5xl:my-30;
 }
 
 .card-icon {
@@ -120,9 +104,9 @@
 }
 
 .footer-section-heading {
-  @apply text-lg 2xl:text-[24px] 3xl:text-[32px] 4xl:text-[40px]  5xl:text-[65px] font-semibold pb-3 2xl:pt-6 3xl:pt-8 4xl:pt-10 5xl:pt-14;
+  @apply text-lg max-md:text-[24px] 2xl:text-[24px] 3xl:text-[32px] 4xl:text-[40px]  5xl:text-[65px] font-semibold pb-3 2xl:pt-6 3xl:pt-8 4xl:pt-10 5xl:pt-14;
 }
 
 .footer-section-content {
-  @apply text-sm 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[28px] 5xl:text-[42px] pb-3  font-primary font-medium text-gray-900 py-2 2xl:py-3 3xl:py-4 4xl:py-5 5xl:py-6;
+  @apply text-sm max-md:text-[18px] 2xl:text-[18px] 3xl:text-[22px] 4xl:text-[28px] 5xl:text-[42px] pb-3  font-primary font-medium text-gray-900 py-2 2xl:py-3 3xl:py-4 4xl:py-5 5xl:py-6;
 }

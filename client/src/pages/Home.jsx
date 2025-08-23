@@ -105,20 +105,18 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="w-full h-screen px-10 py-8 relative">
-        <div className="w-full  xl:mx-auto  mx-auto 2xl:flex 2xl:flex-col 2xl:justify-center h-full">
-          {/* Background div */}
-          <div
+      <section className="w-full h-full xl:h-screen  md:px-10 md:py-8 relative ">
+        <div className="w-full px-5 xl:mx-auto  mx-auto 2xl:flex 2xl:flex-col 2xl:justify-center h-full">
+          {/* <div
             className="absolute inset-0 bg-cover bg-center -z-10 h-full"
             style={{ backgroundImage: `url(${HeroBG})` }}
           >
-            {/* Optional overlay */}
             <div className="absolute inset-0 bg-white/70"></div>
-          </div>
+          </div> */}
 
           {/* Text content */}
-          <div className="relative z-10 h-full w-full flex flex-col justify-center mx-auto 2xl:w-[80vw]   5xl:gap-14">
-            <h1 className="text-7xl 2xl:text-8xl 3xl:text-[100px] 4xl:text-[160px] 5xl:text-[250px] leading-20 2xl:leading-26 3xl:leading-28 4xl:leading-46  5xl:leading-70  font-bold  font-primary w-[80%]">
+          <div className="relative z-10  h-full w-full flex flex-col justify-center mx-auto 2xl:w-[90vw]   5xl:gap-14">
+            <h1 className="heading1  max-xl:mt-20">
               <span className="text-primary font-primary">One Alliance.</span>{" "}
               <br />
               <span className="text-accent">
@@ -126,7 +124,7 @@ const Home = () => {
               </span>
             </h1>
 
-            <p className="text-xl 2xl:text-2xl 3xl:text-3xl 4xl:text-4xl 5xl:text-6xl leading-7 2xl:leading-8 3xl:leading-12 4xl:leading-14 5xl:leading-24 font-normal  text-gray-500 py-6">
+            <p className="heading1Para">
               Streamline your shipping, fulfillment, and inventory with our
               cutting-edge software, global transportation network, and
               warehousing solutions.
@@ -141,25 +139,21 @@ const Home = () => {
       </section>
 
       {/* Product Section */}
-      <section className="w-full h-full bg-gradient-to-b from-green-300/30 to-blue-300/30 px-10 py-8 ">
-        <div className="w-full  mx-auto 2xl:w-[90vw] 3xl:w-[80vw]">
-          {/* first product */}
+      <section className="w-full h-full bg-gradient-to-b from-green-300/30 to-blue-300/30 px-4 lg:px-10 py-8 ">
+        <div className="w-full   mx-auto 2xl:w-[90vw] 3xl:w-[80vw]">
           <div
             id="card1"
             className="info-card w-full  bg-gradient-to-tr from-blue-900 via-emerald-600 to-blue-900
-    mx-auto rounded-4xl flex items-center justify-center overflow-hidden sticky top-10 px-10"
+    mx-auto rounded-4xl flex items-center justify-center  overflow-hidden sticky top-10 px-4 lg:px-10"
           >
-            {/* Wrapper for mockup + content */}
-            <div className="flex items-center justify-between w-full">
-              {/* Laptop mockup */}
-              <div className="relative">
+            <div className="  w-full flex flex-col lg:flex-row items-center justify-between">
+              <div className="relative ">
                 <img
                   src={LaptopMockup}
                   alt="Laptop Mockup"
-                  className="w-[1000px] 2xl:w-[1200px] 3xl:w-[1600px] 4xl:w-[2100px] 5xl:w-[3000px]"
+                  className=" w-[350px] lg:w-[1000px] 2xl:w-[1200px] 3xl:w-[1600px] 4xl:w-[2100px] 5xl:w-[3000px] "
                 />
 
-                {/* Image inside laptop screen */}
                 <div className="absolute top-[27%] left-[14%] w-[72%] h-[45%] overflow-hidden rounded-md">
                   <img
                     src={FASoftware}
@@ -169,16 +163,15 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Text Content */}
-              <div className=" ml-10  text-white">
-                <h2 className="text-5xl 2xl:text-[80px] 4xl:text-[120px] 5xl:text-[160px] 4xl:text-nowrap  font-mulish font-medium ">
+              <div className=" max-lg:text-center lg:ml-10  text-white">
+                <h2 className=" text-4xl lg:text-5xl 2xl:text-[80px] 4xl:text-[120px] 5xl:text-[160px] 4xl:text-nowrap  font-mulish font-medium ">
                   FA Software
                 </h2>
-                <p className="text-xl 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[34px] 5xl:text-[52px] mt-6 leading-relaxed">
+                <p className=" text-[18px] lg:text-xl 2xl:text-[24px] 3xl:text-[28px] 4xl:text-[34px] 5xl:text-[52px] mt-6 leading-relaxed">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Consectetur tempora repudiandae atque. Harum, obcaecati!
                 </p>
-                <button className="button2 mt-10">Visit</button>
+                <button className="button2 mt-6 lg:mt-10">Visit</button>
               </div>
             </div>
           </div>
@@ -187,6 +180,7 @@ const Home = () => {
             id="card2"
             className="w-full info-card sticky top-10 bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900 mx-auto rounded-4xl mt-20"
           ></div>
+
           <div
             id="card3"
             className="w-full info-card  sticky top-10 bg-gradient-to-tr from-green-900 via-green-800 to-green-900 mx-auto rounded-4xl mt-20"
@@ -195,7 +189,7 @@ const Home = () => {
       </section>
 
       {/* Integrations */}
-      <section className="w-full h-screen flex items-center justify-center relative py-10 px-10 ">
+      <section className="w-full h-full lg:h-screen flex items-center justify-center relative py-10 px-10 ">
         <div className="xl:w-[90vw] xl:mx-auto  mx-auto">
           <div
             className="absolute inset-0 bg-cover bg-center -z-10 h-full"
@@ -204,7 +198,7 @@ const Home = () => {
 
           <div className="absolute inset-0 bg-white/70 h-full -z-5"></div>
 
-          <div className="flex flex-col  justify-center">
+          <div className="flex flex-col  justify-center ">
             <h2 className="heading2 ">Seamless integration with other tools</h2>
             <p className="h2Para">
               150+ Pre Built Integrations For No Additional Cost
@@ -235,7 +229,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="w-full h-screen relative bg-gradient-to-b from-green-50 to-pink-50 py-10 px-10 flex justify-center items-center ">
+      {/* Features */}
+      <section className="w-full h-full xl:h-screen relative bg-gradient-to-b from-green-50 to-pink-50 py-10 px-10 flex justify-center items-center ">
         <div className="xl:w-[90vw] xl:mx-auto 2xl:w-[80%] mx-auto 5xl:mb-10 5xl:mt-2">
           <h2 className="heading2">Explore our amazing features</h2>
           <p className="h2Para">
@@ -243,7 +238,7 @@ const Home = () => {
             eligendi. Lorem ipsum dolor sit amet.
           </p>
 
-          <div className="flex flex-wrap justify-center  gap-4 2xl:gap-5 3xl:gap-6 4xl:gap-10 5xl:gap-14 pt-8 ">
+          <div className="flex  flex-wrap justify-center  gap-4 2xl:gap-5 3xl:gap-6 4xl:gap-10 5xl:gap-14 pt-8 ">
             {[
               {
                 title: "Import /Export",
@@ -288,11 +283,10 @@ const Home = () => {
               <Tilt options={defaultOptions}>
                 <div
                   key={i}
-                  className="bg-gray-200 rounded-lg w-[200px] 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[520px] 5xl:h-[600px] 4xl:h-[450px] 3xl:h-[350px] 2xl:h-[300px] h-[250px] px-5 py-10 "
+                  className="bg-gray-200 rounded-lg w-[200px] max-xl:w-full 2xl:w-[220px] 3xl:w-[270px] 4xl:w-[360px] 5xl:w-[520px] 5xl:h-[600px] 4xl:h-[450px] 3xl:h-[350px] 2xl:h-[300px] h-[250px] px-5 py-10 "
                 >
                   <div className="flex justify-center pb-4">
                     <div className="bg-gray-900 p-2 rounded-lg ">
-                      {/* <Import color="#ff5533" size={32} /> */}
                       {item.icon}
                     </div>
                   </div>
@@ -309,6 +303,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Reviews */}
       <section
         id="reviews"
         className="overflow-x-hidden bg-gradient-to-tr from-indigo-700 via-sky-600 to-cyan-500  h-screen flex flex-col justify-center items-center relative px-10 pt-20 "
@@ -324,7 +319,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Cards wrapper */}
           <div className="w-full ">
             <div
               id="testimonials"
@@ -409,7 +403,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* Heading stays fixed */}
       </section>
     </Layout>
   );
